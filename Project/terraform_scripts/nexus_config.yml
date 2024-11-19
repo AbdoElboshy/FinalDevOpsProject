@@ -1,0 +1,21 @@
+- hosts: localhost
+  tasks:
+    - name: Configure Nexus Repository
+      uri:
+        url: http://<Nexus_Service_URL>:8081/service/rest/v1/repositories/docker/hosted
+        method: POST
+        user: admin
+        password: admin
+        headers:
+          Content-Type: "application/json"
+        body: '{
+          "name": "docker-hosted",
+          "format": "docker",
+          "type": "hosted",
+          "docker": {
+            "v1Enabled": true,
+            "forceBasicAuth": true,
+            "httpPort": 8082
+          }
+        }'
+        status_code: 201
