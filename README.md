@@ -64,14 +64,3 @@ The following tools and technologies are used in this project:
 
 ### 7. CI/CD Pipeline Configuration
 - Configure Jenkins Pipeline as Code to trigger builds from GitHub on every code push.
-
-## Expected Deliverables
-
-Your GitHub repository should contain the following:
-
-1. **Installation Guide** (`README.md` file with detailed steps)
-2. **Scripts**:
-   - Ansible scripts
-   - Terraform scripts
-   - Jenkins Pipeline files
-   - Kubernetes manifests
